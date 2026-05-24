@@ -1,121 +1,97 @@
-# MasterHttpRelayVPN
+# 🌐 اینترنت آزاد³⁶⁹
+
+[![GitHub](https://img.shields.io/badge/GitHub-Global--Internet--VPN-blue?logo=github)](https://github.com/mahdi78013/Global-Internet-VPN)
+[![Telegram](https://img.shields.io/badge/Telegram-muntivpn-blue?logo=telegram)](https://t.me/muntivpn)
 
 **زبان:** [English](README.md) | فارسی
 
-**کانال تلگرام 📣:** [https://t.me/masterdnsvpn](https://t.me/masterdnsvpn)
+**کانال تلگرام 📣:** [https://t.me/muntivpn](https://t.me/muntivpn) | @muntivpn
 
-**تشکر ویژه ❤️:** [Abolix](https://github.com/abolix)
+**گروه تلگرام 📣:** [https://t.me/+gklMAfodGdE3MGRk](https://t.me/+gklMAfodGdE3MGRk)
 
-MasterHttpRelayVPN یک پراکسی محلی است که ترافیک مرورگر را از مسیر Google Apps Script و Domain Fronting عبور می‌دهد. برای مسیر ساده فقط همین پروژه و یک اکانت رایگان Google کافی است. اگر بعضی سایت‌ها خروجی Google را مسدود کنند، بعدا می‌توانید Exit Node اضافه کنید.
+اینترنت آزاد³⁶⁹ یه ابزار یک‌کلیکه برای دور زدن فیلترینگ اینترنت در ویندوز. فقط `Global-Internet.bat` رو اجرا کن — همه چیز خودکار راه‌اندازی میشه.
 
 ```text
 مرورگر -> پراکسی محلی -> مسیر Google -> رله Apps Script شما -> سایت مقصد
                          فیلتر فقط اتصال شبیه Google را می‌بیند
 ```
 
-## منوی سریع 🧭
+## شروع سریع ⚡
 
-[شروع سریع](docs/fa/GETTING_STARTED.md) | [Docker](docs/fa/DOCKER.md) | [اشتراک گذاری LAN](docs/fa/LAN_SHARING.md) | [راهنمای Exit Node](docs/exit-node/EXIT_NODE_DEPLOYMENT_FA.md)
+### مرحله ۱ — ساخت رله Google ☁️
 
-[مرجع تنظیمات](docs/fa/CONFIGURATION.md) | [رفع مشکل](docs/fa/TROUBLESHOOTING.md) | [نکات امنیتی](docs/fa/SECURITY.md) | [معماری](docs/fa/ARCHITECTURE.md)
+1. وارد [Google Apps Script](https://script.google.com/) بشو
+2. روی **New project** کلیک کن و محتوای پیش‌فرض رو پاک کن
+3. فایل `apps_script/Code.gs` رو باز کن، همه چیز رو کپی و Paste کن
+4. این خط رو پیدا کن و یه رمز طولانی بذار:
+   ```javascript
+   const AUTH_KEY = "یه-رمز-طولانی-اینجا-بذار";
+   ```
+5. از مسیر **Deploy** ← **New deployment** ← **Web app** برو
+6. گزینه **Execute as** رو **Me** و **Who has access** رو **Anyone** بذار
+7. روی **Deploy** کلیک کن و **Deployment ID** رو کپی کن
 
-## شروع خیلی سریع ⚡
-
-قبل از اجرای پراکسی، باید یک بار رله Google را deploy کنید. فقط یک اکانت Google لازم دارید و این کار حدود دو دقیقه زمان می‌برد.
-
-## ساخت رله Google ☁️
-
-- وارد [Google Apps Script](https://script.google.com/) شوید و روی **New project** کلیک کنید.
-- محتوای پیش‌فرض ادیتور را کامل پاک کنید.
-- فایل [apps_script/Code.gs](apps_script/Code.gs) را باز کنید، همه کد آن را کپی کنید، و داخل Apps Script قرار دهید.
-- این خط را پیدا کنید و با یک رمز طولانی و مخصوص خودتان عوض کنید:
-
-    ```javascript
-    const AUTH_KEY = "your-secret-password-here";
-    ```
-
-- از مسیر **Deploy** -> **New deployment** -> **Web app** بروید.
-- گزینه **Execute as** را روی **Me** بگذارید.
-- گزینه **Who has access** را روی **Anyone** بگذارید.
-- روی **Deploy** کلیک کنید، دسترسی‌ها را تایید کنید، و **Deployment ID** را کپی کنید.
-
-این دو مقدار را برای setup wizard نگه دارید:
-
+این دو مقدار رو نگه دار:
 - `Deployment ID` از Google Apps Script
-- `AUTH_KEY`، یک رمز طولانی که باید دقیقا با `auth_key` در کانفیگ محلی یکی باشد
+- `AUTH_KEY` — باید با `auth_key` توی کانفیگ یکی باشه
 
-اگر توضیح کامل‌تر می‌خواهید، [شروع سریع](docs/fa/GETTING_STARTED.md#2-ساخت-رله-google) را ببینید.
+### مرحله ۲ — دانلود
 
-پروژه را با Git یا ZIP دریافت کنید، سپس لانچر یک‌کلیکی را اجرا کنید.
+**گزینه الف: ZIP**
 
-**گزینه A: Git**
+[⬇️ دانلود پروژه](https://github.com/mahdi78013/Global-Internet-VPN/archive/refs/heads/main.zip)
 
-```bash
-git clone https://github.com/masterking32/MasterHttpRelayVPN.git
-cd MasterHttpRelayVPN
-```
-
-**گزینه B: ZIP**
-
-- [صفحه GitHub پروژه](https://github.com/masterking32/MasterHttpRelayVPN) را باز کنید.
-- روی **Code** -> **Download ZIP** کلیک کنید.
-- فایل ZIP را extract کنید.
-- داخل پوشه extract شده `MasterHttpRelayVPN` یک terminal باز کنید.
-
-بعد برنامه را اجرا کنید:
-
-**Windows**
-
-```cmd
-start.bat
-```
-
-**Linux / macOS**
+**گزینه ب: Git**
 
 ```bash
-chmod +x start.sh
-./start.sh
+git clone https://github.com/mahdi78013/Global-Internet-VPN.git
+cd Global-Internet-VPN
 ```
 
-لانچر virtualenv می‌سازد، وابستگی‌ها را نصب می‌کند، اگر `config.json` وجود نداشته باشد setup wizard را باز می‌کند، و سپس پراکسی را اجرا می‌کند.
+### مرحله ۳ — اجرا
 
-بعد از اجرا، مرورگر را روی این پراکسی تنظیم کنید:
+فایل `Global-Internet.bat` رو دوبار کلیک کن.
 
-| گزینه | مقدار |
-|-------|-------|
+اولین بار یه wizard باز میشه که Deployment ID و Auth Key رو ازت می‌خواد — بعدش دیگه نمی‌خواد. پروکسی سیستم خودکار ست میشه و میانبر دسکتاپ ساخته میشه.
+
+> ⚠️ **این پنجره رو باز نگه دار** — بستنش VPN رو قطع می‌کنه و پروکسی رو پاک می‌کنه
+
+## تنظیمات پروکسی مرورگر ⚙️
+
+اگه خودکار تنظیم نشد، دستی وارد کن:
+
+| فیلد | مقدار |
+|------|-------|
 | نوع پراکسی | HTTP |
 | آدرس | `127.0.0.1` |
 | پورت | `8085` |
-| پورت SOCKS5، اختیاری | `1080` |
+| پورت SOCKS5 | `1080` |
 
-برای سایت‌های HTTPS، اگر برنامه نتوانست گواهی را خودکار نصب کند، فایل `ca/ca.crt` را نصب کنید. راهنمای کامل در [شروع سریع](docs/fa/GETTING_STARTED.md) است.
+## نیازمندی‌ها 📋
 
-## قدم‌های بعدی رایج 🛠️
+- ویندوز ۱۰ یا ۱۱
+- [Python 3.8+](https://www.python.org/downloads/) — موقع نصب تیک **Add Python to PATH** رو بزن
 
-- اگر مرورگر خطای certificate نشان می‌دهد، [بخش خطای گواهی](docs/fa/TROUBLESHOOTING.md#خطاهای-certificate) را ببینید.
-- اگر خطای `unauthorized` می‌بینید، مقدار `AUTH_KEY` در [apps_script/Code.gs](apps_script/Code.gs) باید دقیقا با `auth_key` در `config.json` یکی باشد.
-- اگر سرعت پایین است یا timeout می‌گیرید، دستور `python main.py --scan` را اجرا کنید و [مرجع تنظیمات](docs/fa/CONFIGURATION.md#دستورهای-عیب‌یابی) را ببینید.
-- اگر سایت‌هایی مثل ChatGPT یا Turnstile با خروجی Google مشکل دارند، [راهنمای Exit Node](docs/exit-node/EXIT_NODE_DEPLOYMENT_FA.md) را بخوانید.
+## مشکلات رایج 🛠️
 
-## پشتیبانی و اطلاع‌رسانی 📣
+- **خطای certificate** → [بخش رفع مشکل](docs/fa/TROUBLESHOOTING.md) رو ببین
+- **خطای `unauthorized`** → مطمئن شو `AUTH_KEY` توی `Code.gs` با `auth_key` توی `config.json` یکیه
+- **نصب وابستگی‌ها شکست خورد** → یه VPN دیگه روشن کن تا pip وصل بشه، بعد دوباره اجرا کن
 
-- کانال Telegram: [https://t.me/masterdnsvpn](https://t.me/masterdnsvpn)
-- منبع فیلتر تبلیغات: [PersianBlocker](https://github.com/MasterKia/PersianBlocker/)
+## پشتیبانی 📣
+
+- کانال تلگرام: [https://t.me/muntivpn](https://t.me/muntivpn)
+- گروه تلگرام: [https://t.me/+gklMAfodGdE3MGRk](https://t.me/+gklMAfodGdE3MGRk)
 
 ## امنیت 🔒
 
-این پروژه برای آموزش، تست و پژوهش ارائه شده است. مسئولیت رعایت قوانین و شرایط سرویس‌ها با کاربر است. فایل `config.json`، مقدار `auth_key`، پوشه `ca/`، و آدرس Exit Node همراه با PSK معتبر را با کسی به اشتراک نگذارید. قبل از فعال کردن استفاده در شبکه محلی، [نکات امنیتی](docs/fa/SECURITY.md) را بخوانید.
+فایل `config.json`، مقدار `auth_key` و پوشه `ca/` رو با کسی share نکن. این پروژه برای استفاده شخصی و آموزشیه.
 
 ## سلب مسئولیت قانونی ⚠️
 
-MasterHttpRelayVPN فقط برای آموزش، تست و پژوهش ارائه شده است.
-
-- **محدودیت مسئولیت:** توسعه‌دهنده‌ها و مشارکت‌کننده‌ها در قبال هرگونه خسارت مستقیم، غیرمستقیم، اتفاقی، تبعی، یا هر نوع خسارت دیگر ناشی از استفاده یا عدم امکان استفاده از این پروژه مسئول نیستند.
-- **مسئولیت کاربر:** اجرای این پروژه خارج از محیط کنترل‌شده ممکن است روی شبکه، اکانت‌ها، پراکسی‌ها، گواهی‌ها، یا سیستم‌های متصل اثر بگذارد. مسئولیت کامل نصب، پیکربندی، و استفاده با خود کاربر است.
-- **رعایت قوانین:** قبل از استفاده از این نرم‌افزار، رعایت همه قوانین و مقررات محلی، ملی، و بین‌المللی بر عهده کاربر است.
-- **رعایت قوانین Google:** اگر از Google Apps Script یا دیگر سرویس‌های Google استفاده می‌کنید، رعایت Terms of Service، قوانین استفاده، سهمیه‌ها (quota)، و سیاست‌های پلتفرم Google بر عهده شماست. استفاده نادرست ممکن است باعث تعلیق یا مسدود شدن اکانت یا deployment شود.
-- **هشدار TLS/CA:** در حالت Apps Script، ترافیک HTTPS به‌صورت محلی decrypt و دوباره encrypt می‌شود. برای جلوگیری از خطاهای امنیتی مرورگر، باید گواهی CA تولیدشده را نصب کنید.
-- **هشدار LAN:** وقتی LAN sharing فعال است، دستگاه‌های شبکه محلی می‌توانند از پراکسی شما استفاده کنند. این قابلیت را فقط روی شبکه‌های قابل اعتماد فعال کنید و در صورت نیاز لایه‌های امنیتی اضافه بگذارید.
+- مسئولیت رعایت قوانین محلی و بین‌المللی با کاربر است
+- توسعه‌دهندگان در قبال هرگونه خسارت مسئول نیستند
+- رعایت شرایط سرویس Google بر عهده کاربر است
 
 ## License
 
