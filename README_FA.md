@@ -93,6 +93,10 @@ cd Global-Internet-VPN
 - توسعه‌دهندگان در قبال هرگونه خسارت مسئول نیستند
 - رعایت شرایط سرویس Google بر عهده کاربر است
 
+## Credits
+
+این پروژه نسخه بهبودیافته‌ی [MasterHttpRelayVPN](https://github.com/masterking32/MasterHttpRelayVPN) ساخته [masterking32](https://github.com/masterking32) است. ما تغییرات و بهبودهایی روی پروژه اصلی اعمال کرده‌ایم.
+
 ## License
 
 MIT
