@@ -1,22 +1,18 @@
-# MasterHttpRelayVPN
+# اینترنت آزاد³⁶⁹
 
-[![GitHub](https://img.shields.io/badge/GitHub-MasterHttpRelayVPN-blue?logo=github)](https://github.com/masterking32/MasterHttpRelayVPN) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/masterking32/MasterHttpRelayVPN) [![oosmetrics](https://api.oosmetrics.com/api/v1/badge/achievement/85a1f608-5c6d-4fcd-9b7f-b1ff8b680852.svg)](https://oosmetrics.com/repo/masterking32/MasterHttpRelayVPN) [![oosmetrics](https://api.oosmetrics.com/api/v1/badge/achievement/de9bee73-bc68-4f98-ba83-6957007046b1.svg)](https://oosmetrics.com/repo/masterking32/MasterHttpRelayVPN)
+[![GitHub](https://img.shields.io/badge/GitHub-اینترنت_آزاد³⁶⁹-blue?logo=github)](https://github.com/mahdi78013/Global-Internet-VPN)
 
 >**Youtube safe search** and **live streaming** are now **Bypassed & Working** by default. so you don't need `youtube_via_relay` or Cloudflare / VPS `exit_node` for it.
 
 
 **Language:** English | [Persian / فارسی](README_FA.md)
 
-> نسخه فارسی با AI ایجاد شده. ترجیحا از نسخه انگلیسی استفاده کنید.
+**Telegram Channel 📣:** [https://t.me/muntivpn](https://t.me/muntivpn) | @muntivpn
 
-**Telegram Channel 📣:** [https://t.me/MasterDnsVPN](https://t.me/MasterDnsVPN) | @MasterDnsVPN
-
-**Telegram Group 📣:** [https://t.me/MasterDnsVPNGroup](https://t.me/MasterDnsVPNGroup) | @MasterDnsVPNGroup
+**Telegram Group 📣:** [https://t.me/+gklMAfodGdE3MGRk](https://t.me/+gklMAfodGdE3MGRk)
 
 
-**❤️ Special Thanks to** [Abolix](https://github.com/abolix) for making this project possible and maintaining it.
-
-MasterHttpRelayVPN is a local proxy that routes browser traffic through a Google Apps Script relay using domain fronting. The simple path needs only this project and a free Google account. For sites that block Google egress, you can optionally add an exit node later.
+اینترنت آزاد³⁶⁹ is a local proxy that routes browser traffic through a Google Apps Script relay using domain fronting. The simple path needs only this project and a free Google account. For sites that block Google egress, you can optionally add an exit node later.
 
 We mainly use MITM (Man in the Middle) and Domain Fronting techniques.
 
@@ -78,14 +74,14 @@ Download the project with either Git or ZIP, then run the one-click launcher.
 
 **Option A: ZIP**
 
-[Click to Download](https://github.com/masterking32/MasterHttpRelayVPN/archive/refs/heads/python_testing.zip)
+[Click to Download](https://github.com/mahdi78013/Global-Internet-VPN/archive/refs/heads/main.zip)
 
 
 **Option B: Git**
 
 ```bash
-git clone https://github.com/masterking32/MasterHttpRelayVPN.git
-cd MasterHttpRelayVPN
+git clone https://github.com/mahdi78013/Global-Internet-VPN.git
+cd Global-Internet-VPN
 ```
 
 
@@ -127,17 +123,8 @@ You can use telegram as : https://t.me/socks?server=127.0.0.1&port=1080 or if yo
 
 ## Support And Updates 📣
 
-- Telegram channel: [https://t.me/MasterDnsVPN](https://t.me/MasterDnsVPN)
-- Telegram group: [https://t.me/MasterDnsVPNGroup](https://t.me/MasterDnsVPNGroup)
-- Ad blocker filter source: [PersianBlocker](https://github.com/MasterKia/PersianBlocker/)
-
-## Donate 🍩
-
-If you find this project helpful, you can support it with a donation:
-
-- **TON network:** `masterking32.ton`
-- **EVM-compatible networks (ETH and compatible chains):** `0x517f07305D6ED781A089322B6cD93d1461bF8652`
-- **TRC20 network (TRON):** `TLApdY8APWkFHHoxebxGY8JhMeChiETqFH`
+- Telegram channel: [https://t.me/muntivpn](https://t.me/muntivpn)
+- Telegram group: [https://t.me/+gklMAfodGdE3MGRk](https://t.me/+gklMAfodGdE3MGRk)
 
 ## Safety 🔒
 
